@@ -175,7 +175,7 @@ def run_experiment_configurations(gs_model_configurations, min_num_classifiers=1
     return gs_results_df
 	
 	
-# BEST HYPER-PARAMS GRID SEARCH
+# (K) BEST HYPER-PARAMS GRID SEARCH 
 
 
 def get_best_overall_scores(gs_params_results_df):
