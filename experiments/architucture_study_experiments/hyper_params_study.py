@@ -37,7 +37,7 @@ datasets_configurations = {
 }
 
 
-DEFAULT_AGG = 'mean'
+DEFAULT_AGG = 'median'
 
 
 def get_classifier_fold_predictions(model, X_train, y_train, X_test, y_test, num_classes, selected_classifiers):
@@ -146,8 +146,8 @@ def get_model_configurations_results_summary(gs_results_df, agg_func=DEFAULT_AGG
     gs_results_splits_df = gs_results_df.groupby(['dataset', 'kernel_sizes', 'depth', 
                                                   'use_residual', 'bottleneck_size', 
                                                   'num_classifiers', 'number_of_filters', 
-                                                  'split_index']).agg({'test_accuracy': agg_func, 
-                                                                       'test_AUC': agg_func}).reset_index()
+                                                  'split_index']).agg({'test_accuracy': 'max', 
+                                                                       'test_AUC': 'max'}).reset_index()
     
     gs_params_results_df = gs_results_splits_df.groupby(['dataset', 'kernel_sizes', 'depth', 
                                                          'use_residual', 'bottleneck_size', 
@@ -188,14 +188,14 @@ def get_best_overall_scores(gs_params_results_df):
     return best_scores
 
 
-def get_best_k_configs_by_objective(config_overall_mean_scores, objective, k):
+def get_best_k_configs_by_objective(config_overall_mean_scores, gs_params_results_df, objective, k):
     config_key = ['kernel_sizes', 'depth', 'use_residual', 'bottleneck_size', 'num_classifiers', 'number_of_filters']
     
     configs_sorted_by_objective = config_overall_mean_scores.sort_values(objective, ascending=False).reset_index().reset_index()
     
     best_k_configs = configs_sorted_by_objective[configs_sorted_by_objective['index'] < k][config_key]
     
-    best_k_configs_scores = best_k_configs.merge(gspr[config_key + ['dataset', objective]], 
+    best_k_configs_scores = best_k_configs.merge(gs_params_results_df[config_key + ['dataset', objective]], 
                                                  left_on=config_key, right_on=config_key)
     
     return best_k_configs_scores
@@ -210,9 +210,9 @@ def get_best_scores(gs_params_results_df, k=5):
                                                                'number_of_filters']).agg({'test_accuracy': 'mean', 
                                                                                           'test_AUC': 'mean'})
     
-    best_accuracy_configs = get_best_k_configs_by_objective(config_overall_mean_scores, 'test_accuracy', k)
+    best_accuracy_configs = get_best_k_configs_by_objective(config_overall_mean_scores, gs_params_results_df, 'test_accuracy', k)
     
-    best_auc_configs = get_best_k_configs_by_objective(config_overall_mean_scores, 'test_AUC', k)
+    best_auc_configs = get_best_k_configs_by_objective(config_overall_mean_scores, gs_params_results_df, 'test_AUC', k)
     
     return best_scores, best_accuracy_configs, best_auc_configs
 	
