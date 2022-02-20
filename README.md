@@ -14,34 +14,34 @@ We truely hope that this repository's contents will contribute to future researc
 ## Repository Contents
 
 The contents of this repository are as follows:
-1. Source code of INSTINCT
-2. Code for all the experiments detailed in the paper
-3. All experimental results' CSVs
-4. Real-world and synthetic datasets 
-5. Code for the synthetic datasets generators
-6. Jupyter Notebook for running the complete flow
+- Source code of INSTINCT
+- Code for all the experiments detailed in the paper
+- All experimental results' CSVs
+- Real-world and synthetic datasets 
+- Code for the synthetic datasets generators
+- Jupyter Notebook for running the complete flow
 
 ## Datasets
 
-1. ***Location***: All datasets are available under the [ClassificationDatasets](https://github.com/omerh18/INSTINCT/tree/master/ClassificationDatasets) directory.
-2. ***Contents***:
-    1. Real-world benchmark datasets
-        1. AUSLAN2 (Mörchen and Fradkin 2010)
-        2. BLOCKS (Mörchen and Fradkin 2010)
-        3. CONTEXT (Mörchen and Fradkin 2010)
-        4. HEPATITIS (Patel et al. 2008)
-        5. PIONEER (Mörchen and Fradkin 2010)
-        6. SKATING (Mörchen and Fradkin 2010)
-    2. Synthetic datasets
-        1. *RANDOM* synthetic data for the scalability analysis (Experiment 2) 
-        2. *LEVEL-0* and *LEVEL-1* synthetic datasets for the architecture study (Experiment 3)
-3. ***Format***:
-    1. Real-world and *RANDOM* synthetic datasets
-        1. *data.txt* - STIs series data 
+- ***Location***: All datasets are available under the [ClassificationDatasets](https://github.com/omerh18/INSTINCT/tree/master/ClassificationDatasets) directory.
+- ***Contents***:
+    - Real-world benchmark datasets
+        - AUSLAN2 (Mörchen and Fradkin 2010)
+        - BLOCKS (Mörchen and Fradkin 2010)
+        - CONTEXT (Mörchen and Fradkin 2010)
+        - HEPATITIS (Patel et al. 2008)
+        - PIONEER (Mörchen and Fradkin 2010)
+        - SKATING (Mörchen and Fradkin 2010)
+    - Synthetic datasets
+        - *RANDOM* synthetic data for the scalability analysis (Experiment 2) 
+        - *LEVEL-0* and *LEVEL-1* synthetic datasets for the architecture study (Experiment 3)
+- ***Format***:
+    - Real-world and *RANDOM* synthetic datasets
+        - *data.txt* - STIs series data 
             - Each line stands for a single STI in a tab separated format, including the series-ID, symbol-type, start-time and finish-time 
-        2. *labels.txt* - STis series labels
+        - *labels.txt* - STis series labels
             - Each line specifies the class label of a single STIs series in a tab separated format of the series-ID and the associated class-label
-    2. *LEVEL-0* and *LEVEL-1* synthetic datasets
+    - *LEVEL-0* and *LEVEL-1* synthetic datasets
         - Numpy ndarray of all the STIs series' ASTIMs saved as a pickle file named *e_<number-of-STIs-series>_t_<STIs-series-length>_s_<number-of-symbol-types>_level_<level>.pickle* 
 
 ## Code
@@ -64,8 +64,17 @@ All the experimental results' CSVs are available under the [ClassificationResult
 
 ## Dependencies
 
-1. Python 3.8
-2. Jupyter Notebook
+- Python 3.8
+- Jupyter Notebook
+- Packages
+    ```
+    tensorflow (tensorflow-gpu)
+    keras
+    scikit-learn
+    numpy
+    pandas
+    tqdm
+    ```
 
 ## Running Instructions
 
