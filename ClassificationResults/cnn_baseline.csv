@@ -1,0 +1,7 @@
+,dataset,test_accuracy,test_AUC
+0,auslan2,0.53,0.857
+1,blocks,0.984,0.999
+2,context,0.892,0.95
+3,hepatitis,0.737,0.71
+4,pioneer,0.847,0.835
+5,skating,0.866,0.928

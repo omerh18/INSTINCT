@@ -1,0 +1,13 @@
+,dataset,kernel_sizes,depth,use_residual,bottleneck_size,num_classifiers,number_of_filters,pooling,test_accuracy,test_AUC
+0,auslan2,"[20, 30, 40]",3,False,32,3,8,FAP,0.63,0.8800925925925925
+1,auslan2,"[20, 30, 40]",3,False,32,3,8,GAP,0.61,0.8494444444444446
+2,blocks,"[20, 30, 40]",3,False,32,3,8,FAP,1.0,1.0
+3,blocks,"[20, 30, 40]",3,False,32,3,8,GAP,1.0,1.0
+4,context,"[20, 30, 40]",3,False,32,3,8,FAP,1.0,1.0
+5,context,"[20, 30, 40]",3,False,32,3,8,GAP,1.0,1.0
+6,hepatitis,"[20, 30, 40]",3,False,32,3,8,FAP,0.9096734693877552,0.901021484467565
+7,hepatitis,"[20, 30, 40]",3,False,32,3,8,GAP,0.85521,0.862
+8,pioneer,"[20, 30, 40]",3,False,32,3,8,FAP,0.99375,1.0
+9,pioneer,"[20, 30, 40]",3,False,32,3,8,GAP,0.99375,1.0
+10,skating,"[20, 30, 40]",3,False,32,3,8,FAP,0.9924528301886792,0.9997192411124228
+11,skating,"[20, 30, 40]",3,False,32,3,8,GAP,0.982,0.988679245283018
