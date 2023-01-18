@@ -11,27 +11,27 @@ import pandas as pd
 
 datasets_configurations = {
     'blocks': {
-        'epochs': 100, 
+        'epochs': 200, 
         'strides': [1]
     },
     'pioneer': {
-        'epochs': 100, 
+        'epochs': 200, 
         'strides': [1]
     },
     'context': {
-        'epochs': 100, 
+        'epochs': 200, 
         'strides': [1]
     },
     'auslan2': {
-        'epochs': 100, 
+        'epochs': 200, 
         'strides': [1]
     },
     'skating': {
-        'epochs': 100, 
+        'epochs': 200, 
         'strides': [10]
     },
     'hepatitis': {
-        'epochs': 100, 
+        'epochs': 200, 
         'strides': [10]
     },
 }

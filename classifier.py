@@ -189,7 +189,7 @@ class SingleINSTINCTClassifier:
         
         self.model, self.callbacks = model, callbacks
         
-    def fit(self, X_train, y_train, X_test=None, y_test=None, batch_size=None, epochs=100, verbose=True):
+    def fit(self, X_train, y_train, X_test=None, y_test=None, batch_size=None, epochs=200, verbose=True):
 
         hist = self.model.fit(X_train, y_train, 
                               batch_size=batch_size, 
@@ -238,7 +238,7 @@ class EnsembleINSTINCTClassifier:
             
             self.classifiers.append(model)
     
-    def fit(self, X_train, y_train, X_test=None, y_test=None, batch_size=None, epochs=100, verbose=True):
+    def fit(self, X_train, y_train, X_test=None, y_test=None, batch_size=None, epochs=200, verbose=True):
         for i in range(self.num_classifiers):
             
             model = self.classifiers[i]

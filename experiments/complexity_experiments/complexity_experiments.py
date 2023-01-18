@@ -47,7 +47,7 @@ def run_representation_generation_per_sample(labels_df, data_df, sampling_parame
 
 
 def run_training_per_sample(labels_df, data_df, sampling_parameter, data_sampling_dict, experiment_name,
-							model_configuration, strides=[1, 10], num_epochs=100, iterations=None, batch_size=None):
+							model_configuration, strides=[1, 10], num_epochs=200, iterations=None, batch_size=None):
     sampling_values = data_sampling_dict[sampling_parameter]['values']
     
     sampling_parameter_description = data_sampling_dict[sampling_parameter]['description']
