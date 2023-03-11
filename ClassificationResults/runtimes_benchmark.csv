@@ -1,0 +1,7 @@
+,dataset,RGT,cpu_epoch_time_stride_1,cpu_epoch_time_stride_10,gpu_epoch_time_stride_1,gpu_epoch_time_stride_10
+0,auslan2,0.156,0.025,0.008,0.018,0.015
+1,blocks,0.087,0.067,0.012,0.02,0.016
+2,context,1.117,1.193,0.026,0.022,0.019
+3,hepatitis,3.561,60.004,5.379,2.176,1.063
+4,pioneer,0.547,0.061,0.011,0.023,0.022
+5,skating,1.495,52.145,5.328,2.148,1.046

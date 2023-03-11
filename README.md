@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository is related to the paper "*INSTINCT* – Inception-based Symbolic Time Intervals Series Classification", submitted to the *XXX* journal.
+This repository is related to the paper "*INSTINCT* – Inception-based Symbolic Time Intervals Series Classification", submitted to the *Information Sciences* journal.
 
 In the paper, we introduce INSTINCT - a novel deep learning based framework for the classification of series of Symbolic Time Intervals (STIs). 
 
